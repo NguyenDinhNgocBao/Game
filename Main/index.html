@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gai Alime</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/fontawesome-free-6.1.0-web/fontawesome-free-6.1.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+    <!--Header-->
+    <header id="head">
+        <div class="header_top">
+            <!--Logo-->
+            <div>
+                <a href=""><img width="100%" class="header_top-logo" src="https://daominhha.net/wp-content/uploads/2020/12/logonew.png" alt=""></a>
+            </div>
+
+            <!--Search-->
+            <div class="header_top-search">
+                    <input class="header_top-search-input" type="text" placeholder="Search something...">
+                    <button class="header_top-search-btn"><i class="fa-solid fa-magnifying-glass"></i></butto>
+            </div>
+
+            <!--Toogle dark light mode-->
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                   <input type="checkbox" id="checkbox" />
+                   <div class="slider round"></div>
+                </label>
+            </div>
+            <!--End-->
+
+            <!--Shopping Cart-->
+            <div class="shopping_cart">
+                <div  id="cart" ><i class="fa-solid fa-cart-shopping"><div class="cart"><p id="number-current">0</p></div></i></div>
+
+                <div id="list-main" class="display shopping_cart-list">
+                    <h3 style="color: #000; margin-bottom: 20px;">Giỏ Hàng</h3>
+                   
+                    <div class="shopping_cart-current">
+                        <p>Số Lượng Game: <span id="quantity-current"></span></p>
+                        <button>Down All</button>
+                    </div>                 
+                </div>              
+            </div>  
+
+            <!--Form Login / Regis-->
+            <div class="formLogin">
+                <div class="header_top-bars">
+                    <div class="header_top-burger"></div>
+                </div>
+                <div class="form_InOut">
+                    <ul class="form_InOut-list">
+                        <li id="login" class="form_InOut-item">Đăng nhập</li>
+                        <li id="register" class="form_InOut-item">Đăng ký</li>
+                        <li class="form_InOut-item">Trợ giúp</li>
+                        <li class="form_InOut-item">Donate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="header_bottom-list">
+                <div class="category">
+                    <div class="header_bottom-item">
+                        Game+
+                    </div>
+                    <ul class="header_bottom-list-menu">
+                        <li><a href="" class="header_bottom-item-menu">Game Đối Kháng</a></li>
+                        <li><a href="" class="header_bottom-item-menu">Game Thể Thao</a></li>
+                        <li><a href="" class="header_bottom-item-menu">Game Giả Lập</a></li>
+                        <li><a href="" class="header_bottom-item-menu">Game Kinh Dị</a></li>
+                        <li><a href="" class="header_bottom-item-menu">Game Giải Đố</a></li>
+                        <li><a href="" class="header_bottom-item-menu">Game Thế Giới Mở</a></li>
+                        <li><a href="" class="header_bottom-item-menu">Game Mô Phỏng</a></li>
+                        <li><a href="" class="header_bottom-item-menu">Game Sinh Tồn</a></li>
+                        <li><a href="" class="header_bottom-item-menu">Game Hành Động</a></li>
+                        <li><a href="" class="header_bottom-item-menu">Game Bắn Súng</a></l>
+                    </ul>
+                </div>
+                <span class="line"></span>
+                <a href="#studio" class="header_bottom-item">Studio</a>
+                <span class="line"></span>
+                <a href="#gh" class="header_bottom-item">Game Hot</a>
+                <span class="line"></span>
+                <a href="#cd" class="header_bottom-item">Cộng Đồng</a>
+                <span class="line"></span>
+                <a href="#" class="header_bottom-item">Blog+</a>
+            </div>
+        </div>
+    </header>
+    <!--FORM-->
+    <div id="form" class="form">
+            <div class="button-box">
+                <div id="btn-box"></div>
+                <button type="button" onclick="login()" class="toogle-btn">Log In</button>
+                <button type="button" onclick="register()" class="toogle-btn">Register</button>
+            </div>
+            <form id="Formlogin" class="input-group">
+                    <div class="form_user-box">
+                        <input class="form_user-input" type="text" name="" required="">
+                        <label>Username</label>
+                    </div>
+                    <div class="form_user-box c2">
+                        <input class="form_user-input password" type="password" name="" required="">
+                        <label>Password</label>
+                        <div class="eyes">
+                            <i id="eye_close" class="fa-solid fa-eye-slash"></i>
+                            <i id="eye_open" style="color: #065816;" class="eyeHandle fa-solid fa-eye"></i>
+                        </div >
+                    </div>
+                    <div class="help">
+                        <a href="">Quên mật khẩu</a>
+                        <a href="">Đăng nhập bằng cách khác</a>
+                    </div>
+                    <div class="social-icons">
+                        <a ><img src="https://i.ibb.co/cFGCL3n/fb.png"></a>
+                        <a><img src="https://i.ibb.co/xfD2qzr/gp.png"></a>
+                        <a><img src="https://i.ibb.co/V3QrpzY/tw.png"></a>                   
+                    </div>
+            </form>
+            <form id="Formregister" style="display: none;" class="input-group">
+                    <div class="form_user-box">
+                        <input class="form_user-input" type="email" name="" required="">
+                        <label>Email</label>
+                    </div>
+                    <div class="form_user-box c2">
+                        <input class="form_user-input password" style="width: 97%;" type="password" name="" required="">
+                        <label>Password</label>                     
+                    </div>
+                    <div class="help">
+                        <a href="">Đăng ký bằng cách khác</a>
+                    </div>
+                    <div class="social-icons">
+                        <a ><img src="https://i.ibb.co/cFGCL3n/fb.png"></a>
+                        <a><img src="https://i.ibb.co/xfD2qzr/gp.png"></a>
+                        <a><img src="https://i.ibb.co/V3QrpzY/tw.png"></a>                   
+                    </div>
+            </form>
+            <div class="panel">
+                <button class="submit_btn">Submit</button>
+            </div>
+    </div>
+    <!--Body Main-->
+    <main>
+        <!--SLICK-->
+        <div class="image-slider">
+            <div class="img_slick-handle">
+                <img src="https://cdn.dribbble.com/userupload/4580949/file/original-2a1a16e975509555b95b7b8140cbbe03.png?compress=1&resize=1024x768" alt="">
+            </div>
+            <div class="img_slick-handle">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_e80a907c2c43337e53316c71555c3c3035a1343e.1920x1080.jpg?t=1674441703" alt="">
+            </div>
+            <div class="img_slick-handle">
+                <img src="https://media.wired.com/photos/639bf35a24c352e627eccc43/master/pass/Ragnaro%CC%88k-culture-ar1qdh.jpg" alt="">
+            </div>
+            <div class="img_slick-handle">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2022/7/21/ss7be97aa12cfc0e8feccdbb95dac3de71480f21401920x1080-1658380954365862312624.jpg" alt="">
+            </div>
+            <div class="img_slick-handle">
+                <img src="https://i0.wp.com/d9n64ieh9hz8y.cloudfront.net/wp-content/uploads/20220916233824/genshin-impact-3-1-mo-rong-sa-mac-sumeru-chuyen-de-game.jpg?fit=1280%2C720&ssl=1" alt="">
+            </div>
+        </div>
+        <!--Content-->
+        <div class="container">
+            <div class="container-title">
+                <div class="line-throught"></div>
+                <h1 id="studio" class="container-title-name">Bao Studio</h1>   
+                <div class="line-throught"></div>
+            </div>
+            <div class="container-qoutes">
+                <img class="container-qoutes-img" src="/imgbin-league-of-legends-video-game-counter-strike-source-wiki-riot-games-league-of-legends-vFKwesMtNediPJygfDhFMVhZZ_t.png" alt="">
+                <p>
+                    "I believe that games are an essential part of the human experience. They are how we learn, how we socialize, and how we innovate." <span style="color: coral;">Jane McGonigal</span>
+                </p>
+            </div>
+            <div class="container-intro">
+                <div class="container-intro-item">
+                    <h1>Giới thiệu</h1>
+                    <p>Game Offline, Game Online dành cho PC là một bộ môn thể thao điện tử có sức hút vô cùng mãnh liệt đối với tất cả các Gamer. Vì rất nhiều lý do như: Game đồ họa cao, nhân vật game đẹp, mô phỏng tình tiết và kịch bản của game vô cùng chân thật. <br>
+                        Liên tục các hội nhóm Game Offline, game Online và các Web tải game được lập ra nhằm hỗ trợ cũng cấp link tải Game, giải đáp thắc mắc khi gặp lỗi, cùng kết nối thành đội nhóm giao lưu và chơi game một cách lành mạnh.</p>
+                </div>
+                <div class="container-intro-item">
+                    <h1>Về chúng tôi</h1>
+                    <p>Website và nhóm hỗ trợ cài đặt Game <a href="" style="color: #c10b30;">Bao studio</a> là một website mới tạo chuyên cung cấp Game Offline chất lượng. Được tạo ra nhằm cung cấp những game hay dành cho PC từ cấu hình nhẹ đến cấu hình cao cấp. <br>
+                        <a href="" style="color: #c10b30;">Bao studio</a> liên tục tổng hợp link tải game full, tải game pc offline full mới nhất, tổng hợp các game hay có hiệu ứng đồ họa cao nhằm đem đến những giá trị giải trí tuyệt vời sau những giờ làm việc và học tập căng thẳng.
+                    </p>
+                </div>
+                <div class="container-intro-item">
+                    <h1>Thành viên</h1>
+                    <ul class="container-intro-item-list">
+                        <li>Trí Nguyễn</li>
+                        <li>Đạt Võ</li>
+                        <li>Quang Phu</li>
+                        <li>Hữu Phước</li>
+                        <li>Tôn Vũ</li>
+                        <li>Sơn Châu</li>
+                        <li>Ngọc Bảo</li>
+                    </ul>
+                    <p>
+                        Để ủng hộ cho <a href="" style="color: #c10b30;">Bao studio</a> các bạn có thể nâng cấp lên thành viên VIP hoặc Donate cho chúng tôi.
+                        <br>
+                        Xin cảm ơn!
+                    </p>
+                </div>
+            </div>
+            <div class="container-title">
+                <div class="line-throught"></div>
+                <h1 id="gh" class="container-title-name">Game Hot</h1>   
+                <div class="line-throught"></div>
+            </div>
+            <div class="container-game">
+                <div class="container_game-main">
+                    <div class="container_game-main-left">
+                       <a href="/Main/game.html"> <img class="img-game container_game-main-img" width="100%" height="100%" src="https://cdn.oneesports.vn/cdn-data/sites/4/2022/08/stray-avatar.jpg" alt=""></a>
+                        <div class="item-flex">
+                            <div class="container_game-main-left-info">
+                                <div class="container_game-main-left-item">Cats</div>
+                                <div class="container_game-main-left-item">Adventure</div>
+                                <div class="container_game-main-left-item">Cyberpunk</div>
+                                <div class="container_game-main-left-item">Atmospheric</div>
+                            </div>
+                            <div class="container_game-main-left-rate">
+                                <h1 class="title">Stray</h1>
+                                <i class="fa-solid fa-heart"></i>
+                                <span>15k</span></span>
+                            </div>
+                        </div>
+                        <div class="add-to-cart">
+                            <button class="ADD">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="container_game-main-right">
+                        <div class="container_game-main-right-top">
+                            <div class="container_game-main-right-top-content">
+                                <h1>Stray</h1>
+                                <p>Lost, alone and separated from family</p>
+                                <p>a stray cat must untangle an ancient </p>
+                                <p>mystery to escape a long-forgotten</p>
+                                <p>cybercity and find their way home.</p>
+                            </div>
+                        </div>
+                        <div class="container_game-main-right-bot">
+                            <div class="container_game-main-right-bot-item"><img src="https://s.yimg.com/uu/api/res/1.2/Ve2cBM.PmejX5GgLXG4zSg--~B/aD0yMTYwO3c9Mzg0MDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2022-07/451825c0-06ae-11ed-8d2f-c6bee5bbef2a.cf.jpg" alt=""></div>
+                            <div class="container_game-main-right-bot-item"><img src="https://images.newscientist.com/wp-content/uploads/2022/08/16162533/SEI_118880616.jpg" alt=""></div>
+                            <div class="container_game-main-right-bot-item"><img src="https://www.nme.com/wp-content/uploads/2022/06/Stray-screenshot.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_game-offer">
+                    <div class="container_game-offer-head">
+                        <h2>Special Offers</h2>
+                        <a href="">More</a>
+                    </div>
+                    <div class="container_game-offer-list">
+                        <div class="container_game-offer-item">
+                            <a href="/Main/gameOffer.html"><img class="img-game" src="https://i0.wp.com/news.xbox.com/en-us/wp-content/uploads/sites/2/2022/10/MW2_Launch_CEA_X1_Wire_Hero_16x9-fd687e9075dac5ccc465.jpg?fit=1920%2C1080&ssl=1" alt=""></a>
+                            <h1 class="title title-offer">Call Of Duty</h1>
+                            <div class="add-to-cart">
+                                <button class="ADD">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="container_game-offer-item">
+                            <a href="/Main/gameOffer.html"><img class="img-game" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg?t=1663663573" alt=""></a>
+                            <h1 class="title title-offer">CyberPunk</h1>
+                            <div class="add-to-cart">
+                                <button class="ADD">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="container_game-offer-item">
+                            <a href="/Main/gameOffer.html"><img class="img-game" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1811260/capsule_616x353.jpg?t=1675351814" alt=""></a>
+                            <h1 class="title title-offer">Fifa 23</h1>
+                            <div class="add-to-cart">
+                                <button class="ADD">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="container_game-offer-item">
+                            <a href="/Main/gameOffer.html"><img class="img-game" src="https://gamedva.com/wp-content/uploads/GTA-5-Grand-Theft-Auto-V.jpg" alt=""></a>
+                            <h1 class="title title-offer">GTA 5</h1>
+                            <div class="add-to-cart">
+                                <button class="ADD">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-title">
+                <div class="line-throught"></div>
+                <h1 id="cd" class="container-title-name">Cộng Đồng</h1>   
+                <div class="line-throught"></div>
+            </div>
+            <div class="container-community">
+                <div class="container-community-left">
+
+                </div>
+                <div></div>
+            </div>
+            <div></div>
+        </div>
+    </main>
+
+
+    <!--SCROLL TOP-->
+    <button onclick="topFunction()" id="scrollBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <!--END-->
+
+
+    <!--Footer-->
+    <footer>
+        <h1>Footer</h1>
+    </footer>
+
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="/JS/form.js"></script>
+    <script src="/JS/slick.js"></script>
+    <script src="/JS/lightBox.js"></script>
+    <script src="/JS/scroll.js"></script>
+    <script src="/JS/shoppingCart.js"></script>
+</body>
+</html>
