@@ -79,11 +79,62 @@ function login(){
     z.style.left="0px";
 }        
 
+
+const submitLog = document.getElementById("clickLogin")
+
+const submitRe = document.getElementById("clickRegis")
+submitRe.addEventListener("click", (e)=>{
+  e.preventDefault();
+  const userName = document.querySelector(".userName").value;
+  const password = document.querySelector(".passwordRegis").value;
+  const name = document.querySelector(".nameNumber").value;
+
+
+  const user = {
+    userName: userName,
+    Name: name,
+    password: password
+  }
+  const json = JSON.stringify(user);
+  localStorage.setItem("acc", json);
+  alert("dang ky thanh cong")
+  document.querySelector(".userName").value ='';
+  document.querySelector(".passwordRegis").value ='';
+});
+
+
+submitLog.addEventListener("click", (e)=>{
+  e.preventDefault();
+  const userName = document.querySelector(".userNameLog").value;
+  const password = document.querySelector(".passwordLog").value;
+  const user = localStorage.getItem("acc");
+  const data = JSON.parse(user);
+  if(userName === data.userName && password === data.password){
+    alert("dang nhap thanh cong")
+    window.location.href = "index.html";
+  }else{
+    alert("That bai")
+  }
+});
+
+//Day ten ra user
+
+function logOut(){
+  const clickOut = document.getElementById("logOut");
+  clickOut.addEventListener("click", function(e){
+    e.preventDefault();
+    document.getElementById("Name").innerText = "";
+  })
+}
+
+
 function callFunction(){
   showTab();
   openForm()
   passwordChanged();
   register();
   login();
+  document.getElementById("Name").innerText = JSON.parse(localStorage.getItem("acc")).Name;
+  logOut();
 }
 callFunction()
