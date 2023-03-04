@@ -97,7 +97,11 @@ submitRe.addEventListener("click", (e)=>{
   }
   const json = JSON.stringify(user);
   localStorage.setItem("acc", json);
-  alert("dang ky thanh cong")
+  if(userName !== "" && password !== "" && name !== "" ){
+    alert("dang ky thanh cong")
+  }else{
+    alert("Dang ky that bai")
+  }
   document.querySelector(".userName").value ='';
   document.querySelector(".passwordRegis").value ='';
 });
