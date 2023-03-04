@@ -1005,10 +1005,39 @@ input:checked + .slider:before {
  .footer-end-list{
     padding: 20px;
  }
+ .folow{
+    color: #c10b30;
+ }
  .nav_2{
+    margin: 30px 0;
     display: flex;
     justify-content: space-around;
  }
+ .nav_2-item{
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.9);
+}
+.social-icon{
+    color: #262626;
+    font-size: 32px;
+    transition: all 0.3s ease-in-out;
+ }
+.nav_2-item:hover{
+    background-color: #c10b30;
+    transform: scale(1.1);
+}
+.social-icon:hover{
+    color: #fff;
+    transform: rotateY(360deg);
+}
  .item-folow{
     margin-top: 20px;
     color: #fff;
