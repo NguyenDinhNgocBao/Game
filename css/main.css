@@ -17,7 +17,7 @@
 body{
     height: 1000px;
     font-family: 'Kanit', sans-serif;
-    background: linear-gradient(86deg, rgba(55,93,25,0.9360119047619048) 19%, rgba(83,149,50,0.9500175070028011) 46%, rgba(155,237,105,0.938813025210084) 72%, rgba(147,195,119,0.9220063025210083) 88%);
+    background-color: #525856;
 }
 header {
     width: 100%;
@@ -905,6 +905,7 @@ input:checked + .slider:before {
     text-align: center;
     list-style: none;
     cursor: pointer;
+    font-size: 20px;
 }
 .toDoList li:hover{
     text-decoration: line-through 3px #9bed69;
