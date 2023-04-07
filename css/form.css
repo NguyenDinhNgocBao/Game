@@ -3,14 +3,14 @@ input:focus{
     font-family: 'Kanit', sans-serif;
 }
 .form{
-    display: none;
+    display: block;
     z-index: 100000;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40%;
-    height: 400px;
+    height: 500px;
     border-radius: 20px;
     background-color: #333;
     border: 2px solid #065816;
@@ -56,6 +56,11 @@ input:focus{
 .c2{
     width: 90%;
     position: relative;
+}
+.c3{
+    width: 90%;
+    position: relative;
+    margin-top: 40px;
 }
 .form_user-input{
     width: 95%;
