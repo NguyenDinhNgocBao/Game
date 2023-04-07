@@ -3,7 +3,7 @@ input:focus{
     font-family: 'Kanit', sans-serif;
 }
 .form{
-    display: block;
+    display: none;
     z-index: 100000;
     position: absolute;
     top: 50%;
